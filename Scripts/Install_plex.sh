@@ -7,6 +7,7 @@ sudo apt install -y autoconf make automake build-essential gperf yasm gnutls-dev
 git clone https://github.com/mpv-player/mpv-build.git
 cd mpv-build
 
+echo --extra-ldflags="-latomic" >> ffmpeg_options
 echo --enable-libmpv-shared > mpv_options
 echo --disable-cplayer >> mpv_options
 
